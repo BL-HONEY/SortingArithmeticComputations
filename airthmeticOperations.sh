@@ -9,7 +9,7 @@ result2=0;
 result3=0;
 result4=0;
 counter=0;
-
+arrayLength=0
 #declare a dictionary to store computed values
 declare -A allComputations
 
@@ -28,6 +28,11 @@ allComputations["result2"]=$result2
 allComputations["result3"]=$result3
 allComputations["result4"]=$result4
 
+arrayLength=${#allComputations[@]}
+for (( counter=1; counter <= arrayLength; counter++ ))
+	do
+		arr[$counter]=${allComputations[result$counter]}
+	done
 
 
 
