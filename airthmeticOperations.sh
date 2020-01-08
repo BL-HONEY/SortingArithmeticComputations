@@ -1,5 +1,4 @@
-#### Welcome to Airthmetic computation problem ####
-#!/bash/bin -x
+#!/bin/bash -x
 
 #variables
 a=0;
@@ -9,6 +8,10 @@ result1=0;
 result2=0;
 result3=0;
 result4=0;
+counter=0;
+
+#declare a dictionary to store computed values
+declare -A allComputations
 
 #reading values from users
 read -p "Enter a value for a: " a
@@ -19,3 +22,14 @@ result1=$(( $a + $b * $c ))
 result2=$(( $a * $b + $c ))
 result3=$(( $c + $a / $b ))
 result4=$(( $a % $b + $c ))
+
+allComputations["result1"]=$result1
+allComputations["result2"]=$result2
+allComputations["result3"]=$result3
+allComputations["result4"]=$result4
+
+
+
+
+
+
